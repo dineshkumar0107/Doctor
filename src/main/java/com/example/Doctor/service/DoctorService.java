@@ -14,7 +14,7 @@ public class DoctorService {
      DoctorRepository doctorRepository;
      public Doctor saveDoctor(Doctor doctor){
           String doctorName = doctor.getDoctorName();
-          doctorName="Dr. "+doctorName;
+          doctorName="Dr. "+ doctorName;
           doctor.setDoctorName(doctorName);
      return doctorRepository.save(doctor);
      }
