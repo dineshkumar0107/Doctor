@@ -43,14 +43,17 @@ public class DoctorController {
         Doctor doctor = new Doctor();
         String doctorId = json.getString("doctorId");
         doctor.setDoctorId(Integer.valueOf(doctorId));
+
         String doctorName = json.getString("doctorName");
         doctor.setDoctorName(doctorName);
+
         String specializedIn = json.getString("specializedIn");
         doctor.setSpecializedIn(specializedIn);
+
         if(json.has("experience")){
 
             String exp = json.getString("experience");
-            doctor.setExperience("experience");
+            doctor.setExperience(exp);
         }
         return doctor;
     }

@@ -19,7 +19,7 @@ public class Doctor {
     private String doctorName;
     @Column(name = "experience")
     private String experience;
-    @Column(name = "specialized_In")
+    @Column(name = "specializedIn")
     private String specializedIn;
 
     public Integer getDoctorId() {
