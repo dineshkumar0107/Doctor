@@ -22,6 +22,7 @@ public class DoctorController {
     public ResponseEntity<String> saveDoctor(@RequestBody String requestDoctor){
         JSONObject json = new JSONObject(requestDoctor);
       List<String> validationList = validateDoctor(json);
+
         if(validationList.isEmpty()){
             Doctor doctor =setDoctor(json);
             doctorService.saveDoctor(doctor);
